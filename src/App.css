@@ -1,0 +1,164 @@
+/* Basic Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+  background-color: #f0f2f5;
+  color: #1c1e21;
+}
+
+.app-container {
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.main-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.section {
+  background-color: #ffffff;
+  border: 1px solid #dddfe2;
+  border-radius: 8px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+}
+
+.section h3 {
+  margin-bottom: 12px;
+  font-size: 1.1rem;
+  color: #606770;
+}
+
+/* EditableText Component Styles */
+.editable-input, .editable-textarea {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+  font-family: inherit;
+  background-color: #fff;
+  color: #1c1e21;
+}
+
+.editable-textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.editable-text-display {
+  cursor: pointer;
+  min-height: 40px; /* To make it clickable even when empty */
+  padding: 8px;
+  border-radius: 4px;
+  width: 100%;
+  white-space: pre-wrap; /* To respect newlines in the text */
+  line-height: 1.5;
+  border: 1px solid transparent;
+}
+
+.editable-text-display:hover {
+  background-color: #f5f5f5;
+  border-color: #ddd;
+}
+
+.editable-text-display .placeholder {
+  color: #8a919b;
+  font-style: italic;
+}
+
+/* DifferentialDiagnosis Component Styles */
+.diagnosis-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.add-diagnosis-form {
+  display: flex;
+  margin-top: 12px;
+}
+
+.diagnosis-input {
+  flex-grow: 1;
+  border: 1px solid #ccc;
+  padding: 8px;
+  border-radius: 4px 0 0 4px;
+  background-color: #fff;
+  color: #1c1e21;
+}
+
+.add-btn {
+  padding: 8px 12px;
+  border: 1px solid #ccc;
+  border-left: none;
+  background-color: #f0f2f5;
+  cursor: pointer;
+  border-radius: 0 4px 4px 0;
+}
+
+.diagnosis-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 8px;
+  min-height: 50px;
+}
+
+.diagnosis-item {
+  display: flex;
+  align-items: center;
+  padding: 8px;
+  background-color: #f7f7f7;
+  border-radius: 4px;
+  border: 1px solid #ddd;
+  user-select: none; /* Prevent text selection while dragging */
+  box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+}
+
+.drag-handle {
+  cursor: grab;
+  margin-right: 10px;
+  color: #999;
+}
+
+.diagnosis-item:active {
+  cursor: grabbing;
+}
+
+.diagnosis-text {
+  flex-grow: 1;
+}
+
+.delete-btn {
+  background: none;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+  color: #999;
+  padding: 0 5px;
+  line-height: 1;
+}
+
+.delete-btn:hover {
+  color: #f00;
+}
